@@ -204,7 +204,7 @@ module.exports = class UserController {
 
     // check if password match
     if (password != confirmpassword) {
-      res.status(422).json({ error: 'As senhas não conferem.' })
+      res.status(422).json({ error: 'As senhas devem ser iguais.' })
 
       // change password
     } else if (password == confirmpassword && password != null) {
