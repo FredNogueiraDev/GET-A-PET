@@ -1,12 +1,12 @@
-// const bcrypt = require('bcrypt')
-// const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const User = require('../models/User')
 
-// // helpers
+// helpers
 // const getUserByToken = require('../helpers/get-user-by-token')
 // const getToken = require('../helpers/get-token')
-// const createUserToken = require('../helpers/create-user-token')
+const createUserToken = require('../helpers/create-user-token')
 // const { imageUpload } = require('../helpers/image-upload')
 
 module.exports = class UserController {
@@ -58,25 +58,25 @@ module.exports = class UserController {
       return
     }
 
-//     // create password
-//     const salt = await bcrypt.genSalt(12)
-//     const passwordHash = await bcrypt.hash(password, salt)
+    // create password
+    const salt = await bcrypt.genSalt(12)
+    const passwordHash = await bcrypt.hash(password, salt)
 
-//     // create user
-//     const user = new User({
-//       name: name,
-//       email: email,
-//       phone: phone,
-//       password: passwordHash,
-//     })
+    // create user
+    const user = new User({
+      name: name,
+      email: email,
+      phone: phone,
+      password: passwordHash,
+    })
 
-//     try {
-//       const newUser = await user.save()
+    try {
+      const newUser = await user.save()
 
-//       await createUserToken(newUser, req, res)
-//     } catch (error) {
-//       res.status(500).json({ message: error })
-//     }
+      await createUserToken(newUser, req, res)
+    } catch (error) {
+      res.status(500).json({ message: error })
+    }
 //   }
 
 //   static async login(req, res) {
