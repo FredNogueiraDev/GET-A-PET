@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
 // helpers
-// const getUserByToken = require('../helpers/get-user-by-token')
+const getUserByToken = require('../helpers/get-user-by-token')
 const getToken = require('../helpers/get-token')
 const createUserToken = require('../helpers/create-user-token')
 // const { imageUpload } = require('../helpers/image-upload')
@@ -184,7 +184,7 @@ module.exports = class UserController {
     const userExists = await User.findOne({ email: email })
 
     if (user.email !== email && userExists) {
-      res.status(422).json({ message: 'Por favor, utilize outro e-mail!' })
+      res.status(422).json({ message: 'Este e-mail já está cadastrado no sistema!' })
       return
     }
 
