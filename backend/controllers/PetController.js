@@ -83,14 +83,14 @@ module.exports = class PetController {
     }
   }
 
-//   // get all registered pets
-//   static async getAll(req, res) {
-//     const pets = await Pet.find().sort('-createdAt')
+  // get all registered pets
+  static async getAll(req, res) {
+    const pets = await Pet.find().sort('-createdAt')
 
-//     res.status(200).json({
-//       pets: pets,
-//     })
-//   }
+    res.status(200).json({
+      pets: pets,
+    })
+  }
 
 //   // get all user pets
 //   static async getAllUserPets(req, res) {

@@ -12,7 +12,7 @@ router.post(
   imageUpload.array('images'),
   PetController.create,
 )
-// router.get('/', PetController.getAll)
+router.get('/', PetController.getAll)
 // router.get('/mypets', PetController.getAllUserPets)
 // router.get('/myadoptions', verifyToken, PetController.getAllUserAdoptions)
 // router.get('/:id', PetController.getPetById)
