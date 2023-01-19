@@ -41,10 +41,10 @@ module.exports = class PetController {
       return
     }
 
-//     if (!images) {
-//       res.status(422).json({ message: 'A imagem é obrigatória!' })
-//       return
-//     }
+    if (images.length === 0) {
+      res.status(422).json({ message: 'A imagem é obrigatória!' })
+      return
+    }
 
     // get user
     const token = getToken(req)
@@ -67,9 +67,9 @@ module.exports = class PetController {
       },
     })
 
-//     images.map((image) => {
-//       pet.images.push(image.filename)
-//     })
+    images.map((image) => {
+      pet.images.push(image.filename)
+    })
 
     try {
       const newPet = await pet.save()
