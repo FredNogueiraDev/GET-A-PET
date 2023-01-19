@@ -92,31 +92,31 @@ module.exports = class PetController {
     })
   }
 
-//   // get all user pets
-//   static async getAllUserPets(req, res) {
-//     // get user
-//     const token = getToken(req)
-//     const user = await getUserByToken(token)
+  // get all user pets
+  static async getAllUserPets(req, res) {
+    // get user
+    const token = getToken(req)
+    const user = await getUserByToken(token)
 
-//     const pets = await Pet.find({ 'user._id': user._id })
+    const pets = await Pet.find({ 'user._id': user._id }).sort('-createdAt')
 
-//     res.status(200).json({
-//       pets,
-//     })
-//   }
+    res.status(200).json({
+      pets,
+    })
+  }
 
-//   // get all user adoptions
-//   static async getAllUserAdoptions(req, res) {
-//     // get user
-//     const token = getToken(req)
-//     const user = await getUserByToken(token)
+  // get all user adoptions
+  static async getAllUserAdoptions(req, res) {
+    // get user
+    const token = getToken(req)
+    const user = await getUserByToken(token)
 
-//     const pets = await Pet.find({ 'adopter._id': user._id })
+    const pets = await Pet.find({ 'adopter._id': user._id })
 
-//     res.status(200).json({
-//       pets,
-//     })
-//   }
+    res.status(200).json({
+      pets,
+    })
+  }
 
 //   // get a specific pet
 //   static async getPetById(req, res) {
