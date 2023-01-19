@@ -1,35 +1,39 @@
-const db = require('../db/conn')
-const { DataTypes } = require('sequelize');
+const mongoose = require('../db/conn')
+const { Schema } = mongoose
 
-
-const Pet = db.define('Pet', {
+const Pet = mongoose.model(
+  'Pet',
+  new Schema({
     name: {
-        type: DataTypes.STRING,
-        require: true,
+      type: String,
+      required: true,
     },
     age: {
-        type: DataTypes.NUMBER,
-        require: true,
+      type: Number,
+      required: true,
+    },
+    description: {
+      type: String,
     },
     weight: {
-        type: DataTypes.NUMBER,
-        require: true,
+      type: Number,
+      required: true,
     },
     color: {
-        type: DataTypes.STRING,
-        require: true,
+      type: String,
+      required: true,
     },
     images: {
-        type: DataTypes.ARRAY,
-        require: true,
+      type: Array,
+      required: true,
     },
     available: {
-        type: DataTypes.BOOLEAN,
+      type: Boolean,
     },
     user: Object,
     adopter: Object,
-},
-{timestamps: true}
+  }, {timestamps: true}),
 )
 
-module.exports = Pet;
+module.exports = Pet
+Footer

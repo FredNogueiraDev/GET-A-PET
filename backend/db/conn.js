@@ -1,15 +1,10 @@
-const { Sequelize, Model } = require('sequelize');
+const mongoose = require('mongoose')
 
-const sequelize = new Sequelize('getapet', 'root', 'admin123', {
-    host: 'localhost',
-    dialect: 'mysql'
-})
-
-try {
-    sequelize.authenticate()
-    console.log('Conexão com BD realizada com Sucesso!')
-}catch(err){
-    console.log(`Não foi possível conectar ao BD: ${err}`)
+async function main() {
+  await mongoose.connect('mongodb://localhost:27017/getapetref')
+  console.log('Conectou com Mongoose!')
 }
 
-module.exports = sequelize
+main().catch((err) => console.log(err))
+
+module.exports = mongoose
