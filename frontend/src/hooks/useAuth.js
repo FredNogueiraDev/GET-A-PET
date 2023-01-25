@@ -9,6 +9,7 @@ export default function useAuth() {
   const { setFlashMessage } = useFlashMessage()
   const [authenticated, setAuthenticated] = useState(false)
   const history = useHistory()
+  // eslint-disable-next-line
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
