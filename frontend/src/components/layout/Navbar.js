@@ -1,52 +1,62 @@
-import { Link } from 'react-router-dom'
-import { useContext } from 'react'
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 
-import styles from './Navbar.module.css'
+import styles from "./Navbar.module.css";
 
-import Logo from '../../assets/img/logo.png'
+import Logo from "../../assets/img/LOGO.png";
 
 /* contexts */
-import { Context } from '../../context/UserContext'
+import { Context } from "../../context/UserContext";
 
 function Navbar() {
-    const { authenticated, logout } = useContext(Context)
+  const { authenticated, logout } = useContext(Context);
 
-    return (
-        <nav className={styles.navbar}>
-          <div className={styles.navbar_logo}>
-            <img src={Logo} alt="Get A Pet" />
-            <h2>Get A Pet</h2>
-          </div>
-          <ul>
+  return (
+    <nav className={styles.navbar}>
+      <div className={styles.navbar_logo}>
+        <Link to="/">
+          <img src={Logo} alt="Get A Pet" />
+        </Link>
+      </div>
+      <ul>
+        {authenticated ? (
+          <>
             <li>
-              <Link to="/">Adotar</Link>
+              <Link className={styles.navbar_links} to="/pet/myadoptions">
+                adoções
+              </Link>
             </li>
-            {authenticated ? (
-              <>
-                <li>
-                  <Link to="/pet/myadoptions">Adoções</Link>
-                </li>
-                <li>
-                  <Link to="/pet/mypets">Pets</Link>
-                </li>
-                <li>
-                  <Link to="/user/profile">Perfil</Link>
-                </li>
-                <li onClick={logout}>Sair</li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <Link to="/login">Entrar</Link>
-                </li>
-                <li>
-                  <Link to="/register">Registar</Link>
-                </li>
-              </>
-            )}
-          </ul>
-        </nav>
-      )
-    }
+            <li>
+              <Link className={styles.navbar_links} to="/pet/mypets">
+                pets
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.navbar_links} to="/user/profile">
+                perfil
+              </Link>
+            </li>
+            <li onClick={logout}>
+              <p className={styles.navbar_links}>sair</p>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link className={styles.navbar_links} to="/login">
+                entrar
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.navbar_links} to="/register">
+                registar
+              </Link>
+            </li>
+          </>
+        )}
+      </ul>
+    </nav>
+  );
+}
 
-export default Navbar
+export default Navbar;

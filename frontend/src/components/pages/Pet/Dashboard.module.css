@@ -2,28 +2,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2em;
   }
   
   .petslist_header h1 {
-    margin: 0;
+    margin: .8em 0;
+    color: var(--main-bg-color);
   }
   
   .petslist_header a {
     text-decoration: none;
-    background-color: #16479d;
-    color: #fff;
+    background-color: var(--main-bg-color);
+    color: var(--white);
     font-weight: bold;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.1s;
     padding: 0.5em 0.8em;
     border-radius: 5px;
-    border: 2px solid #16479d;
+    border: 2px solid var(--main-bg-color);
   }
   
   .petslist_header a:hover {
     background-color: transparent;
-    color: #16479d;
+    color: var(--main-bg-color);
   }
   
   .petslist_container {
@@ -32,7 +32,7 @@
   }
   
   .petlist_row {
-    border-bottom: 1px solid #16479d;
+    border-bottom: 1px solid var(--main-bg-color);
     padding: 1em;
     margin: 1em;
     display: flex;
@@ -55,36 +55,41 @@
   .actions a,
   .actions button {
     text-decoration: none;
-    color: #16479d;
-    border: 2px solid #16479d;
+    color: var(--main-bg-color);
+    border: 2px solid var(--main-bg-color);
     border-radius: 5px;
     padding: 7px 12px;
-    background-color: #fff;
+    background-color: transparent;
     margin-left: 1em;
     cursor: pointer;
-    transition: 0.3s;
-    font-size: 12px;
+    transition: 0.1s;
+    font-size: 14px;
+    font-weight: 500;
   }
   
   .actions a:hover,
   .actions button:hover {
-    background-color: #16479d;
-    color: #fff;
+    background-color: var(--main-bg-color);
+    color: var(--white);
   }
   
   .actions .conclude_btn {
-    color: #25b456;
-    border-color: #25b456;
+    color: var(--white);
+    background-color: var(--main-bg-color);
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.1s;
   }
   
   .actions .conclude_btn:hover {
-    color: #fff;
-    background-color: #25b456;
+    color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
+    background-color: transparent;
   }
   
   /* my adoptions */
   .contacts {
-    margin-left: 2em;
+    margin-left: 5em;
   }
   
   .contacts p {
