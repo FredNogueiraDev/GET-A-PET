@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import Input from "../../form/Input";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import styles from "../../form/Form.module.css";
 
@@ -22,7 +22,10 @@ function Login() {
 
   return (
     <section className={styles.form_container}>
-      <h1>Login</h1>
+      <h1>Fazer Login</h1>
+      <p>
+        Digite o seu e-mail e senha para <br /> fazer login
+      </p>
       <form onSubmit={handleSubmit}>
         <Input
           text="E-mail"
@@ -38,11 +41,12 @@ function Login() {
           placeholder="Digite a senha"
           handleOnChange={handleChange}
         />
-        <input type="submit" value="Entrar" />
+        <input type="submit" value="Continuar" />
       </form>
-      <p>
-        Não tem conta? <Link to="/register">Clique aqui.</Link>
-      </p>
+
+      <Link to="/register">
+        <input type="button" value="Não possuo conta" />
+      </Link>
     </section>
   );
 }

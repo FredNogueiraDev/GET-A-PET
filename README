@@ -1,0 +1,55 @@
+# Get a Pet
+
+## Sobre
+
+Projeto desenvolvido para exercitar meus conhecimentos em **HTML, CSS, JavaScript, MongoDB e NodeJS,** para isso, foi implementado um site para auxiliar à adoção de animais de estimação.
+
+O objetivo é ajudar as pessoas que querem doar animais a encontrar pessoas que querem adotá-los, exibindo os pets na página home para que todos possam ve-los.
+
+## Dependências globais
+
+- NodeJS (v19.4.0)
+- NPM (v9.2.0)
+- MongoDB (v5.0.14)
+
+## Instalação
+
+1. Instalação do projeto:
+    
+    ```html
+    git clone [https://github.com/FredNogueiraDev/GET-A-PET.git](https://github.com/FredNogueiraDev/GET-A-PET.git)
+    ```
+    
+2. Instalação das dependências:
+    1. GET-A-PET/backend
+        
+        ```html
+        npm install
+        ```
+        
+    2. GET-A-PET/frontend
+        
+        ```html
+        npm install
+        ```
+        
+3.  Inicialização do projeto:
+    1. GET-A-PET/backend
+        
+        ```html
+        npm start
+        ```
+        
+    2. GET-A-PET/frontend
+        
+        ```html
+        npm start
+        ```
+        
+- A página será aberta automáticamente no navegador.
+- **Este é um projeto educacional!**
+
+## Autor
+
+| [<img src="https://avatars.githubusercontent.com/u/102488476?v=4" width=115><br><sub>Frederico Nogueira</sub>](https://www.linkedin.com/in/frederico-nogueira-654924238/) | 
+| :---: |

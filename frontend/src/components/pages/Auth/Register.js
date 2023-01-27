@@ -24,7 +24,7 @@ function Register(){
 
   return (
     <section className={styles.form_container}>
-      <h1>Registrar</h1>
+      <h1 className={styles.form_container_h1_register}>Registrar</h1>
       <form onSubmit={handleSubmit}>
       <Input
           text="Nome"
@@ -63,9 +63,9 @@ function Register(){
         />
         <input type="submit" value="Cadastrar" />
       </form>
-      <p>
-        Já tem conta? <Link to="/login">Clique aqui.</Link>
-      </p>
+      <Link to="/login">
+        <input type="button" value="Já possuo conta" />
+      </Link>
     </section>
   )
 }

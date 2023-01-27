@@ -15,6 +15,11 @@
     border: 1px solid #777;
     border-radius: 5px;
   }
+
+  .form_control input:focus{
+    border: 1px solid var(--main-bg-color);
+    outline: none;
+  }
   
   .form_control input::placeholder {
     color: #7b7b7b;

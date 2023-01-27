@@ -19,7 +19,7 @@ function Home() {
       <div className={styles.pet_home_header}>
         <h1>ADOTE UM PET</h1>
         <p>
-          Nossos pets estão esperando <br /> por você!
+          Nossos pets estão esperando por você!
         </p>
       </div>
       <div className={styles.pet_container}>
