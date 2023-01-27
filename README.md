@@ -1,10 +1,25 @@
 # Get a Pet
+![Badge Projeto finalizado](http://img.shields.io/static/v1?label=STATUS&message=Finalizado&color=GREEN&style=for-the-badge)
 
 ## Sobre
 
 Projeto desenvolvido para exercitar meus conhecimentos em **HTML, CSS, JavaScript, MongoDB e NodeJS,** para isso, foi implementado um site para auxiliar à adoção de animais de estimação.
-
 O objetivo é ajudar as pessoas que querem doar animais a encontrar pessoas que querem adotá-los, exibindo os pets na página home para que todos possam ve-los.
+O Get a Pet foi feito com a arquitetura MVC, aplicando boas práticas, testes e validações. Tudo que é necessário para a criação de um sistema robusto com base em Node.
+O projeto foi feito com auxílio do professor Matheus Battisti no curso "NodeJS do zero a Maestria".
+
+## Imagens
+### Home
+![home](https://user-images.githubusercontent.com/102488476/215175688-c9ef837b-6de9-48bf-a9a3-78461587887f.png)
+
+### Login
+![login](https://user-images.githubusercontent.com/102488476/215175905-7005d0b6-778e-420c-b88a-ab5d77ff5194.png)
+
+### Meus Pets
+![myPets](https://user-images.githubusercontent.com/102488476/215176133-db40cc76-31ba-4aaa-b6c0-8a150aa9ffad.png)
+
+### Minhas Adoções
+![myAdoptions](https://user-images.githubusercontent.com/102488476/215176380-ef72228c-d373-4ee7-b61c-103af4243c51.png)
 
 ## Dependências globais
 
@@ -51,5 +66,3 @@ O objetivo é ajudar as pessoas que querem doar animais a encontrar pessoas que 
 
 ## Autor
 
-| [<img src="https://avatars.githubusercontent.com/u/102488476?v=4" width=115><br><sub>Frederico Nogueira</sub>](https://www.linkedin.com/in/frederico-nogueira-654924238/) | 
-| :---: |
