@@ -32,7 +32,7 @@ O projeto foi feito com auxílio do professor Matheus Battisti no curso "NodeJS 
 1. Instalação do projeto:
     
     ```html
-    git clone [https://github.com/FredNogueiraDev/GET-A-PET.git](https://github.com/FredNogueiraDev/GET-A-PET.git)
+    git clone https://github.com/FredNogueiraDev/GET-A-PET.git
     ```
     
 2. Instalação das dependências:
